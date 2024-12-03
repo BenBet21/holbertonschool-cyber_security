@@ -1,2 +1,2 @@
 #!/bin/bash
-ssh-keygen -t rsa -b 4096 -f "$1" -N ""
+ps -u "$1" -o pid,vsz,rss,cmd | grep -v " 0 0 "
