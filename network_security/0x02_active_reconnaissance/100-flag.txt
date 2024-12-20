@@ -1,2 +1,1 @@
-Dont forget to delete this comment please
-         Holberton Sec Lab - 2334e893c8e5a9fbfd556e5d8ed1f863
+2334e893c8e5a9fbfd556e5d8ed1f863
