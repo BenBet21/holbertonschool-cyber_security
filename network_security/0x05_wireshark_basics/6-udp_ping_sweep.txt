@@ -1,1 +1,1 @@
-udp and udp.dstport >= 0
+udp and udp.dstport == PORT
