@@ -1,1 +1,1 @@
-ip.proto ==2
+ip.proto ==1
