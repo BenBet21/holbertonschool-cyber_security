@@ -1,1 +1,1 @@
-arp.opcode == 1 or arp.opcode == 2
+arp.opcode == 1 or arp.opcode == 2 and arp.dst.hw_mac
