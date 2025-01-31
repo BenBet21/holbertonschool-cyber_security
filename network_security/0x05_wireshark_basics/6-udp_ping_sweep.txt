@@ -1,1 +1,1 @@
-udp and udp.dstport == PORT
+udp and udp.dstport == 7
