@@ -1,1 +1,1 @@
-udp
+udp and udp.dstport >= 0
