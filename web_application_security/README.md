@@ -1,1 +1,0 @@
-# holbertonschool-cyber_security
