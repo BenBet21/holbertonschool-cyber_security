@@ -16,8 +16,8 @@ encoded_phrase="${encoded_phrase#'{xor}'}"
 decoded_phrase=$(echo -n "$encoded_phrase" | base64 -d 2>/dev/null)
 
 # Vérifie si la conversion base64 a réussi
-if [ $? -ne 0 ]; then
-  echo "Erreur : La chaîne encodée n'est pas valide."
+if [ $? -ne 0 ] || [ -z "$decoded_phrase" ]; then
+  echo "Erreur : La chaîne encodée n'est pas valide ou vide après décodage."
   exit 1
 fi
 
@@ -27,9 +27,15 @@ output=""
 i=0
 while [ "$i" -lt "${#decoded_phrase}" ]; do
   char="${decoded_phrase:$i:1}"
-  xor_char=$(( $(printf "%d" "'$char") ^ 95 ))
 
-  # Ajoute le caractère décodé à la variable output
+  # Vérifie si le caractère est NULL et le remplace par un espace
+  if [ "$char" == $'\x00' ]; then
+    xor_char=32  # Espace ASCII
+  else
+    xor_char=$(( $(printf "%d" "'$char") ^ 95 ))
+  fi
+
+  # Ajoute le caractère décodé à output en gérant correctement les octets
   output="${output}$(printf "\\$(printf '%03o' "$xor_char")")"
 
   i=$((i + 1))
