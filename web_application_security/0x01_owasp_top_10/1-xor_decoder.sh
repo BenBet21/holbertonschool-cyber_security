@@ -12,9 +12,10 @@ output=""
 for ((i = 0; i < ${#decoded_phrase}; i++)); do
   char="${decoded_phrase:$i:1}"
   # Effectue l'opération XOR avec 95 et convertit en caractère
-  xor_char=$(printf "\\x$(printf '%x' "$(( $(printf '%03o' "'$char") ^ 95 ))")")
-  output+="$xor_char"
+  xor_char=$(( $(printf "%d" "'$char") ^ 95 ))
+ #incrémenter la variable output 
+  output+=$(printf "\\$(printf '%03o' $xor_char)")
 done
 
 # Affiche la phrase décodée
-echo -e "$output"
+echo "$output"
