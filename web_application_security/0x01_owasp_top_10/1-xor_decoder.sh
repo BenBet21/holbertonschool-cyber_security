@@ -17,4 +17,4 @@ for ((i = 0; i < ${#decoded_phrase}; i++)); do
 done
 
 # Affiche la phrase décodée
-echo -n "$output"
+echo -e "$output"
