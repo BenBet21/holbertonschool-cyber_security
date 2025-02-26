@@ -3,7 +3,7 @@ Projet Holberton School Cyber Sécurité
 Capture d'écran du projet
 À propos de moi
 
-Je suis BenBet21, un développeur passionné par la cybersécurité et les technologies émergentes. Mon parcours m'a conduit à explorer divers aspects de la sécurité informatique, de la protection des systèmes à la sécurisation des applications web.
+Je suis Benoit BETI, un développeur passionné par la cybersécurité et les technologies émergentes. Mon parcours m'a conduit à explorer divers aspects de la sécurité informatique, de la protection des systèmes à la sécurisation des applications web.
 
 Description du projet
 
