@@ -1,1 +1,1 @@
-http://web0x01.hbtn/api/a3/nosql_injection/sign_in
+/api/a3/nosql_injection/sign_in
