@@ -1,0 +1,34 @@
+/.htaccess           [32m (Status: 200)[0m [Size: 385]
+/0                   [36m (Status: 301)[0m [Size: 0][34m [--> http://web0x04.hbtn/0/][0m
+/create              [36m (Status: 301)[0m [Size: 169][34m [--> http://web0x04.hbtn/create/][0m
+/dashboard           [36m (Status: 302)[0m [Size: 0][34m [--> http://web0x04.hbtn/wp-admin/][0m
+/favicon.ico         [32m (Status: 200)[0m [Size: 1150]
+/feed                [36m (Status: 301)[0m [Size: 0][34m [--> http://web0x04.hbtn/feed/][0m
+/index.php           [36m (Status: 301)[0m [Size: 0][34m [--> http://web0x04.hbtn/][0m
+/index.php           [36m (Status: 301)[0m [Size: 0][34m [--> http://web0x04.hbtn/][0m
+/login               [36m (Status: 302)[0m [Size: 0][34m [--> http://web0x04.hbtn/wp-login.php][0m
+/page1               [36m (Status: 301)[0m [Size: 0][34m [--> http://web0x04.hbtn/][0m
+/payment_gateway     [36m (Status: 301)[0m [Size: 169][34m [--> http://web0x04.hbtn/payment_gateway/][0m
+/robots.txt          [32m (Status: 200)[0m [Size: 257]
+/rss                 [36m (Status: 301)[0m [Size: 0][34m [--> http://web0x04.hbtn/feed/][0m
+/rss2                [36m (Status: 301)[0m [Size: 0][34m [--> http://web0x04.hbtn/feed/][0m
+/sitemap.xml         [32m (Status: 200)[0m [Size: 6860]
+/t                   [36m (Status: 301)[0m [Size: 0][34m [--> http://web0x04.hbtn/tour-to-the-beautiful-city-of-mpg_city-in-mpg_country/][0m
+/T                   [36m (Status: 301)[0m [Size: 0][34m [--> http://web0x04.hbtn/tour-to-the-beautiful-city-of-mpg_city-in-mpg_country/][0m
+/to                  [36m (Status: 301)[0m [Size: 0][34m [--> http://web0x04.hbtn/tour-to-the-beautiful-city-of-mpg_city-in-mpg_country/][0m
+/tour                [36m (Status: 301)[0m [Size: 0][34m [--> http://web0x04.hbtn/tour-to-the-beautiful-city-of-mpg_city-in-mpg_country/][0m
+/tr                  [36m (Status: 301)[0m [Size: 0][34m [--> http://web0x04.hbtn/try-harder/][0m
+/wp-admin            [36m (Status: 301)[0m [Size: 169][34m [--> http://web0x04.hbtn/wp-admin/][0m
+/wp-content          [36m (Status: 301)[0m [Size: 169][34m [--> http://web0x04.hbtn/wp-content/][0m
+/wp-config.php       [32m (Status: 200)[0m [Size: 0]
+/wp-cron.php         [32m (Status: 200)[0m [Size: 0]
+/wp-includes         [36m (Status: 301)[0m [Size: 169][34m [--> http://web0x04.hbtn/wp-includes/][0m
+/wp-links-opml.php   [32m (Status: 200)[0m [Size: 251]
+/wp-load.php         [32m (Status: 200)[0m [Size: 0]
+/wp-login.php        [32m (Status: 200)[0m [Size: 4123]
+/wp-mail.php         [33m (Status: 403)[0m [Size: 2501]
+/wp-settings.php     [31m (Status: 500)[0m [Size: 0]
+/wp-signup.php       [36m (Status: 302)[0m [Size: 0][34m [--> http://web0x04.hbtn/wp-login.php?action=register][0m
+/xmlrpc.php          [33m (Status: 405)[0m [Size: 42]
+/xmlrpc.php          [33m (Status: 405)[0m [Size: 42]
+/y                   [36m (Status: 301)[0m [Size: 0][34m [--> http://web0x04.hbtn/you-got-a-flag/][0m
