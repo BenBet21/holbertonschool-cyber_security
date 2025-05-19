@@ -1,2 +1,2 @@
 GitHub repository: holbertonschool-cyber_security
-Directory: linux_security/0x02_mandatory_access_control
+Directory: linux_security/0x02_mandatory_access_contro
