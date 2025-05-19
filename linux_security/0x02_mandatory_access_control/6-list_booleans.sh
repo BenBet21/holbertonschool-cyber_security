@@ -1,2 +1,2 @@
 #!/bin/bash
-semanage boolean -l
+sudo semanage boolean -l
