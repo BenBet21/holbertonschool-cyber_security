@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo grep -i "public" /etc/snmp/snmp.conf
+sudo grep -i "public" /etc/snmp/snmpd.conf
