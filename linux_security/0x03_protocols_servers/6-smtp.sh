@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -q "smtpd_tls_security_level" /etc/postfix/main.cf
+grep -i "^smtpd_tls_security_level" /etc/postfix/main.cf
