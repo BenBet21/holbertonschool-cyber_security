@@ -1,0 +1,4 @@
+comm -23 <(apt-mark showmanual | sort) <(gzip -dc /var/log/installer/initial-status.gz | grep -oP '(?<=Package: ).*' | sort) > apt-packages.txt
+cat npm-packages.txt | awk '{print $2}' | cut -d'@' -f1 | xargs npm install -g
+pip install -r pip-packages.txt
+xargs sudo apt install -y < apt-packages.txt

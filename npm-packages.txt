@@ -1,0 +1,4 @@
+/home/benoit/.nvm/versions/node/v22.5.1/lib
+├── corepack@0.29.2
+└── npm@10.8.2
+

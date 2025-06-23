@@ -1,0 +1,20 @@
+Extensions installées sur WSL : Ubuntu :
+bradlc.vscode-tailwindcss
+docker.docker
+github.copilot
+github.copilot-chat
+github.vscode-github-actions
+mechatroner.rainbow-csv
+ms-azuretools.vscode-docker
+ms-ceintl.vscode-language-pack-fr
+ms-python.debugpy
+ms-python.python
+ms-python.vscode-pylance
+ms-vscode.cmake-tools
+ms-vscode.cpptools
+ms-vscode.cpptools-extension-pack
+ms-vscode.cpptools-themes
+ms-vsliveshare.vsliveshare
+ritwickdey.liveserver
+twxs.cmake
+wallabyjs.quokka-vscode
