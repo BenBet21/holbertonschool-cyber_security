@@ -1,0 +1,3 @@
+ 1. Qu’est-ce que l’injection de commande ?
+
+L’injection de commande est une vulnérabilité de sécurité dans une application web qui permet à un attaquant d’exécuter des **commandes système** arbitraires sur le serveur, souvent avec les mêmes privilèges que l'application. Cela se produit lorsque l'application passe des données non sécurisées directement à un interpréteur de commandes comme Bash, sans validation suffisante.
