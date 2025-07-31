@@ -14,6 +14,9 @@ import sys
 def error_exit(message):
     """
     Print an error message to stdout and exit with status code 1.
+
+    Args:
+        message (str): Error message to display.
     """
     print(message)
     sys.exit(1)
@@ -72,11 +75,13 @@ def search_and_replace(pid, search_bytes, replace_bytes, heap_start, heap_end):
                 error_exit("String not found in heap.")
 
             mem_file.seek(heap_start + offset)
-            padded_replace = replace_bytes + b'\x00' * (len(search_bytes) - len(replace_bytes))
+            padded_replace = replace_bytes + \
+                b'\x00' * (len(search_bytes) - len(replace_bytes))
             mem_file.write(padded_replace)
 
-            print(f"Replaced '{search_bytes.decode()}' with '{replace_bytes.decode()}' "
-                  f"at address {hex(heap_start + offset)}")
+            print(f"Replaced '{search_bytes.decode()}' with "
+                  f"'{replace_bytes.decode()}' at address "
+                  f"{hex(heap_start + offset)}")
 
     except PermissionError:
         error_exit("Permission denied. Try running with sudo.")
@@ -86,10 +91,12 @@ def search_and_replace(pid, search_bytes, replace_bytes, heap_start, heap_end):
 
 def main():
     """
-    Main function: Parses arguments and triggers the search and replace in heap.
+    Main function: Parses arguments and triggers
+    the search and replace in heap.
     """
     if len(sys.argv) != 4:
-        error_exit("Usage: read_write_heap.py pid search_string replace_string")
+        error_exit("Usage: read_write_heap.py pid "
+                   "search_string replace_string")
 
     pid = sys.argv[1]
     search_str = sys.argv[2]
