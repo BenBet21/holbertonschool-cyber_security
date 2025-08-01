@@ -15,7 +15,6 @@ def usage():
     print("Usage: read_write_heap.py pid search_string replace_string")
     sys.exit(1)
 
-
 def main():
     """Documentation :
     main function docs.
@@ -60,4 +59,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
