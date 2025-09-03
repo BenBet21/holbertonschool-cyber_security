@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo grep "root" auth.log | grep "iptables -A" | wc -l
+sudo grep -i 'iptables -A' auth.log | wc -l
