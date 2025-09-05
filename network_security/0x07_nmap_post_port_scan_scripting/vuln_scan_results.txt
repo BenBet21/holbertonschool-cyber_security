@@ -1,0 +1,10 @@
+# Nmap 7.95 scan initiated Fri Sep  5 05:52:56 2025 as: /usr/lib/nmap/nmap --privileged -p 80 --script http-vuln-cve2017-5638 -oN vuln_scan_results.txt www.holbertonschool.com
+Nmap scan report for www.holbertonschool.com (15.160.106.203)
+Host is up (0.0072s latency).
+Other addresses for www.holbertonschool.com (not scanned): 15.161.34.42 35.152.117.67
+rDNS record for 15.160.106.203: ec2-15-160-106-203.eu-south-1.compute.amazonaws.com
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+# Nmap done at Fri Sep  5 05:52:56 2025 -- 1 IP address (1 host up) scanned in 0.53 seconds
