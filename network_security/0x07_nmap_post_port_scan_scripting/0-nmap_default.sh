@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo nmap --script=default -sV $1
+sudo nmap -sC $1
