@@ -1,39 +1,61 @@
 #!/usr/bin/env ruby
-require 'optparse'  # Permet de gérer les options en ligne de commande
+require 'optparse'
+require 'fileutils'
 
-# Fichier où les tâches seront stockées
 TASKS_FILE = 'tasks.txt'
 
-# Charge les tâches depuis le fichier ou retourne un tableau vide si le fichier n'existe pas
-def load_tasks
-  if File.exist?(TASKS_FILE)
-    File.readlines(TASKS_FILE).map(&:chomp)  # Supprime les retours à la ligne
-  else
-    []
+# Crée le fichier s'il n'existe pas
+FileUtils.touch(TASKS_FILE) unless File.exist?(TASKS_FILE)
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: cli.rb [options]"
+
+  opts.on('-aTASK', '--add=TASK', 'Add a new task') do |task|
+    options[:add] = task
   end
-end
 
-# Sauvegarde les tâches dans le fichier
-def save_tasks(tasks)
-  File.open(TASKS_FILE, 'w') do |file|
-    tasks.each { |task| file.puts(task) }  # Écrit chaque tâche sur une ligne
+  opts.on('-l', '--list', 'List all tasks') do
+    options[:list] = true
   end
+
+  opts.on('-rINDEX', '--remove=INDEX', Integer, 'Remove a task by index') do |index|
+    options[:remove] = index
+  end
+
+  opts.on('-h', '--help', 'Show help') do
+    puts opts
+    exit
+  end
+end.parse!
+
+# Action : Ajouter une tâche
+if options[:add]
+  File.open(TASKS_FILE, 'a') { |f| f.puts options[:add] }
+  puts "Task '#{options[:add]}' added."
 end
 
-# Ajoute une nouvelle tâche
-def add_task(task)
-  tasks = load_tasks
-  tasks << task  # Ajoute la tâche à la fin du tableau
-  save_tasks(tasks)
-  puts "Task '#{task}' added."
-end
-
-# Liste toutes les tâches
-def list_tasks
-  tasks = load_tasks
+# Action : Lister les tâches
+if options[:list]
+  tasks = File.readlines(TASKS_FILE, chomp: true)
   if tasks.empty?
-    puts "No tasks found."  # Message si aucune tâche
+    puts "No tasks found."
   else
-    puts "Tasks:"
     tasks.each_with_index do |task, index|
-      puts "#{index + 1}. #{task}"  #
+      puts "#{index + 1}. #{task}"
+    end
+  end
+end
+
+# Action : Supprimer une tâche
+if options[:remove]
+  tasks = File.readlines(TASKS_FILE, chomp: true)
+  index = options[:remove] - 1
+  if index < 0 || index >= tasks.length
+    puts "Invalid task index."
+  else
+    removed = tasks.delete_at(index)
+    File.write(TASKS_FILE, tasks.join("\n") + "\n")
+    puts "Task '#{removed}' removed."
+  end
+end
