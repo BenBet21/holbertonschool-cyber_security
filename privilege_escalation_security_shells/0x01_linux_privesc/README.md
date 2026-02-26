@@ -1,6 +1,4 @@
-Bien sûr ! Voici un exemple de README concis et clair sur le sujet **“What is the Shell?”** :
 
----
 
 # What is the Shell?
 
